@@ -1,6 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 import "./Home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const searchOnClick = (e) => {
+    e.preventDefault();
+    navigate("/onlyWeather");
+  };
+
   return (
     <div className="bg-secondary align-items-center d-flex flex-column home justify-content-center gap-4">
       <h2 className="text-white">Tell me about...</h2>
@@ -14,7 +23,11 @@ const Home = () => {
           placeholder="Location name..."
           aria-label="Search"
         />
-        <button className="btn btn-success btn-lg" type="submit">
+        <button
+          className="btn btn-success btn-lg"
+          type="submit"
+          onClick={() => navigate("/weatherOnly")}
+        >
           Search
         </button>
       </form>

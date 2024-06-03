@@ -1,22 +1,23 @@
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      className="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-gradient"
       data-bs-theme="dark"
     >
       <div className="container-fluid ms-5">
-        <a href="#" className="navbar-brand">
+        <NavLink to="/" className="navbar-brand">
           <img
             src="https://www.creativefabrica.com/wp-content/uploads/2021/03/31/weather-icon-illustration03-Graphics-10205167-1-580x375.jpg"
             alt=""
             className="img-fluid rounded float-start"
             id="logo"
           />
-        </a>
+        </NavLink>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
@@ -24,14 +25,14 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active ps-5">
-              <a href="#" className="nav-link">
+              <NavLink to="/" className="nav-link">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item dropdown ps-5">
               <a

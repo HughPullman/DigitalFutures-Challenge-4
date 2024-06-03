@@ -1,0 +1,36 @@
+.todayWeather{
+    padding: 5px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.todayWeather span{
+    padding: 15px;
+}
+.addFavourites{
+    padding: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.addFavourites img{
+    width: 25px;
+    margin: 5px;
+    margin-right: 15px;
+}
+
+.weatherOnly{
+    padding: 20px;
+    height: 85vh;
+    background-image: url('/assets/img/pexels-quang-nguyen-vinh-222549-2132180.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    color: rgba(255, 255, 255, 0.788);
+}
+
+.title{
+    margin-bottom: 30px;
+    border-radius: 15px;
+
+}
