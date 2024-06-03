@@ -30,13 +30,16 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active ps-5">
-              <NavLink to="/" className="nav-link">
+              <NavLink
+                to="/"
+                className="nav-link bg-dark bg-gradient rounded-3 p-2"
+              >
                 Home
               </NavLink>
             </li>
             <li className="nav-item dropdown ps-5">
               <a
-                className="nav-link dropdown toggle"
+                className="nav-link dropdown toggle bg-dark bg-gradient rounded-3 p-2"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"

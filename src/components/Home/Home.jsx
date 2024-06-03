@@ -1,13 +1,21 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import "./Home.css";
 
-const Home = () => {
+import { getWeather } from "../../utils/weather.service";
+
+const Home = ({ updateWeatherData }) => {
+  const [searchLocation, setSearchLocation] = useState("");
+
   const navigate = useNavigate();
 
-  const searchOnClick = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
-    navigate("/onlyWeather");
+    const data = await getWeather(searchLocation);
+    updateWeatherData(data);
+    console.log(data);
+    navigate("/weatherOnly");
   };
 
   return (
@@ -16,18 +24,17 @@ const Home = () => {
       <form
         className="d-flex flex-column align-items-center gap-4"
         role="search"
+        onSubmit={handleSearch}
       >
         <input
           type="search"
           className="form-control me-2 bg-dark text-white"
           placeholder="Location name..."
           aria-label="Search"
+          value={searchLocation}
+          onChange={(e) => setSearchLocation(e.target.value)}
         />
-        <button
-          className="btn btn-success btn-lg"
-          type="submit"
-          onClick={() => navigate("/weatherOnly")}
-        >
+        <button className="btn btn-success btn-lg" type="submit">
           Search
         </button>
       </form>

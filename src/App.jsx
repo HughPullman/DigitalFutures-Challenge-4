@@ -8,17 +8,25 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import WeatherOnly from "./components/WeatherOnly/WeatherOnly";
 
-import { getWeather } from "./utils/weather.service";
-
 const App = () => {
   const [weatherData, setWeatherData] = useState({});
+
+  const updateWeatherData = (data) => {
+    setWeatherData(data);
+  };
 
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/weatherOnly" element={<WeatherOnly />} />
+        <Route
+          path="/"
+          element={<Home updateWeatherData={updateWeatherData} />}
+        />
+        <Route
+          path="/weatherOnly"
+          element={<WeatherOnly weatherData={weatherData} />}
+        />
       </Routes>
       <Footer />
     </>

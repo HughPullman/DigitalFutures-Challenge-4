@@ -1,7 +1,7 @@
 .todayWeather{
     padding: 5px;
-    margin-bottom: 30px;
     border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .todayWeather span{
@@ -9,7 +9,7 @@
 }
 .addFavourites{
     padding: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     cursor: pointer;
     border-radius: 15px;
 }
@@ -22,7 +22,7 @@
 
 .weatherOnly{
     padding: 20px;
-    height: 85vh;
+    height: auto;
     background-image: url('/assets/img/pexels-quang-nguyen-vinh-222549-2132180.jpg');
     background-size: cover;
     background-position: center bottom;
@@ -30,7 +30,11 @@
 }
 
 .title{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-radius: 15px;
+}
 
+.weatherCards{
+    flex-wrap: wrap;
+    width: 100vw
 }
