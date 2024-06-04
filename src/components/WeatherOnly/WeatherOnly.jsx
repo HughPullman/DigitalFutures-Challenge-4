@@ -1,7 +1,6 @@
 import "./WeatherOnly.css";
 
 import WeatherCard from "../WeatherCard/WeatherCard";
-import weatherData from "../../../data/dummyWeatherData.json";
 
 const WeatherOnly = ({ weatherData }) => {
   const kelvinConst = 273.15;
@@ -39,13 +38,10 @@ const WeatherOnly = ({ weatherData }) => {
         temp: (currentData.main.temp - kelvinConst).toFixed(1),
       });
     }
-    console.log(tempDays);
     return tempDays;
   };
 
   const days = updateState(weatherData);
-
-  const weather = weatherData.list;
 
   return (
     <div className="d-flex flex-column align-items-center justify-content-center weatherOnly">

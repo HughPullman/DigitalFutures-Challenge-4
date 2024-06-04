@@ -1,0 +1,8 @@
+input{
+    min-width: 30vw;
+}
+
+.navSearchInput{
+    height: 5vh;
+    width: 50% !important;
+}

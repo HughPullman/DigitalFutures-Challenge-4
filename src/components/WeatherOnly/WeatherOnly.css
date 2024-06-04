@@ -22,7 +22,7 @@
 
 .weatherOnly{
     padding: 20px;
-    height: auto;
+    min-height: 85vh;
     background-image: url('/assets/img/pexels-quang-nguyen-vinh-222549-2132180.jpg');
     background-size: cover;
     background-position: center bottom;

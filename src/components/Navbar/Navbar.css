@@ -7,3 +7,11 @@ nav{
     height: 9vh;
 }
 
+@media only screen and (max-width : 960px) {
+    .navbar-collapse {
+        background: #263238;
+        border-radius: 15px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+}
