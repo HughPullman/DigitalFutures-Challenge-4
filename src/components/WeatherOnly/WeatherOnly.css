@@ -20,6 +20,13 @@
     margin-right: 15px;
 }
 
+.favIcon{
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 10px;
+}
+
 .weatherOnly{
     padding: 20px;
     min-height: 85vh;

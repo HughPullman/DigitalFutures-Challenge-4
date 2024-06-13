@@ -12,12 +12,15 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import WeatherOnly from "./components/WeatherOnly/WeatherOnly";
+import Register from "./components/Register/Register";
+import ChangePassword from "./components/ChangePassword/ChangePassword";
 
 const App = () => {
   const [weatherData, setWeatherData] = useState({});
   const [modal, setModal] = useState(false);
   const [modalError, setModalError] = useState("");
   const [searchLocation, setSearchLocation] = useState("");
+  const [userId, setUserId] = useState("");
 
   const navigate = useNavigate();
 
@@ -42,12 +45,31 @@ const App = () => {
     }
   };
 
+  const selectLocation = async (selectedLocation) => {
+    const data = await getWeather(selectedLocation);
+    const responseStatus = data.cod;
+    if (responseStatus === "200") {
+      updateWeatherData(data);
+      navigate("/weatherOnly");
+    } else {
+      setModal(true);
+      setModalError(data.response.data.message);
+    }
+  };
+
+  const handleUserId = (userId) => {
+    setUserId(userId);
+  };
+
   return (
     <>
       <Navbar
         handleSearch={handleSearch}
         setSearchLocation={setSearchLocation}
         searchLocation={searchLocation}
+        handleUserId={handleUserId}
+        userId={userId}
+        selectLocation={selectLocation}
       />
       <Routes>
         <Route
@@ -62,10 +84,20 @@ const App = () => {
         />
         <Route
           path="/weatherOnly"
-          element={<WeatherOnly weatherData={weatherData} />}
+          element={<WeatherOnly weatherData={weatherData} userId={userId} />}
         />
-        <Route path="/login" element={<Login />} />
-        <Route path="/favouriteLocations" element={<FavouriteLocations />} />
+        <Route path="/login" element={<Login handleUserId={handleUserId} />} />
+        <Route
+          path="/favouriteLocations"
+          element={
+            <FavouriteLocations
+              userId={userId}
+              selectLocation={selectLocation}
+            />
+          }
+        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/passChange" element={<ChangePassword />} />
       </Routes>
       <ErrorModal error={modalError} show={modal} handleClose={handleModal} />
       <Footer />

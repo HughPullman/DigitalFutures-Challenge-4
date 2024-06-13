@@ -2,9 +2,25 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 import NavSearch from "../NavSearch/NavSearch";
+import { getLocations } from "../../utils/user.service";
+import LoginButton from "../LoginButton/LoginButton";
+import LogoutButton from "../LogoutButton/LogoutButton";
+import SavedLocations from "../SavedLocations/SavedLocations";
 
-const Navbar = ({ handleSearch, setSearchLocation, searchLocation }) => {
+const Navbar = ({
+  handleSearch,
+  setSearchLocation,
+  searchLocation,
+  handleUserId,
+  userId,
+  selectLocation,
+}) => {
   const [searchBar, setSearchBar] = useState(false);
+  const [savedLoc, setSavedLoc] = useState([]);
+
+  const handleFavSearch = (location) => {
+    selectLocation(location);
+  };
 
   useEffect(() => {
     if (window.location.href === "http://localhost:5173/") {
@@ -13,6 +29,28 @@ const Navbar = ({ handleSearch, setSearchLocation, searchLocation }) => {
       setSearchBar(true);
     }
   }, [window.location.href]);
+
+  const getSavedLocations = async () => {
+    setSavedLoc([]);
+    if (userId !== "") {
+      const savedLocations = await getLocations({
+        id: userId,
+      });
+      if (savedLocations.status === 200) {
+        const favLocations = savedLocations.data.userLocations;
+        const locations = favLocations.map((location) => (
+          <li
+            key={location}
+            className="dropdown-item"
+            onClick={() => handleFavSearch(location)}
+          >
+            {location}
+          </li>
+        ));
+        setSavedLoc(locations);
+      }
+    }
+  };
 
   return (
     <nav
@@ -46,28 +84,18 @@ const Navbar = ({ handleSearch, setSearchLocation, searchLocation }) => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item ps-5">
-              <NavLink to="/login" className="nav-link ">
-                Login
-              </NavLink>
-            </li>
-            <li className="nav-item dropdown ps-5">
-              <button
-                className="nav-link dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                My Saved Locations
-              </button>
-              <ul className="dropdown-menu">
-                <li>
-                  <NavLink to="/favouriteLocations" className="dropdown-item">
-                    My Favourite Locations
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
+
+            {userId ? (
+              <>
+                <LogoutButton handleUserId={handleUserId} />
+                <SavedLocations
+                  getSavedLocations={getSavedLocations}
+                  savedLoc={savedLoc}
+                />
+              </>
+            ) : (
+              <LoginButton />
+            )}
             {searchBar ? (
               <NavSearch
                 handleSearch={handleSearch}

@@ -1,9 +1,17 @@
 import "./WeatherOnly.css";
 
 import WeatherCard from "../WeatherCard/WeatherCard";
+import {
+  addLocation,
+  deleteLocations,
+  getLocations,
+} from "../../utils/user.service";
+import { useEffect, useState } from "react";
 
-const WeatherOnly = ({ weatherData }) => {
+const WeatherOnly = ({ weatherData, userId }) => {
   const kelvinConst = 273.15;
+
+  const [isFav, setIsFav] = useState(false);
 
   const getDayIndices = (data) => {
     let dayIndices = [0];
@@ -25,6 +33,7 @@ const WeatherOnly = ({ weatherData }) => {
     }
     return dayIndices;
   };
+
   const updateState = (data) => {
     const tempDays = [];
     const dayIndices = getDayIndices(data);
@@ -41,6 +50,38 @@ const WeatherOnly = ({ weatherData }) => {
     return tempDays;
   };
 
+  const handleFavourite = async () => {
+    if (isFav) {
+      const res = await deleteLocations({
+        id: userId,
+        location: weatherData.city.name,
+      });
+      checkFavourite();
+    } else {
+      const res = await addLocation({
+        id: userId,
+        location: weatherData.city.name,
+      });
+      checkFavourite();
+    }
+  };
+
+  const checkFavourite = async () => {
+    const favourites = await getLocations({
+      id: userId,
+    });
+    const favouriteLoc = favourites.data.userLocations;
+    if (favouriteLoc.includes(weatherData.city.name)) {
+      setIsFav(true);
+    } else {
+      setIsFav(false);
+    }
+  };
+
+  useEffect(() => {
+    checkFavourite();
+  }, [weatherData]);
+
   const days = updateState(weatherData);
 
   return (
@@ -49,10 +90,30 @@ const WeatherOnly = ({ weatherData }) => {
         <h1>Telling you about...</h1>
         <h1>{weatherData.city.name}</h1>
       </div>
-      <div className="addFavourites bg-black bg-gradient p-3">
-        <img src="/assets/img/favorite-48.png" alt="" />
-        <span>Click to add to favourites</span>
-      </div>
+      {userId !== "" ? (
+        <div
+          className="addFavourites bg-black bg-gradient p-3 d-flex flex-row"
+          onClick={handleFavourite}
+        >
+          {isFav ? (
+            <>
+              <div className="favIcon">
+                <img src="/assets/img/bookmark.png" alt="" />
+              </div>
+              <span>Click to remove from favourites</span>
+            </>
+          ) : (
+            <>
+              <div className="favIcon">
+                <img src="/assets/img/bookmark-white.png" alt="" />
+              </div>
+              <span>Click to add to favourites</span>
+            </>
+          )}
+        </div>
+      ) : (
+        <></>
+      )}
       <div className="todayWeather bg-black bg-gradient p-4">
         <div className="todayWeatherHead p-3 d-flex flex-column align-items-center">
           <h3>Today's Weather:</h3>

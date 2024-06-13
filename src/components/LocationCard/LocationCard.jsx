@@ -1,10 +1,27 @@
+import { deleteLocations } from "../../utils/user.service";
 import "./LocationCard.css";
 
-const LocationCard = ({ name }) => {
+const LocationCard = ({
+  location,
+  selectLocation,
+  userId,
+  handleLocations,
+}) => {
+  const handleRemove = async () => {
+    const res = await deleteLocations({ id: userId, location });
+    if (res.status === 200) handleLocations();
+  };
+
   return (
-    <div className="d-flex flex-row locationCard gap-4 m-3 mx-5">
-      <img src="/public/assets/img/favorite-48.png" alt="" />
-      <p>Location Name</p>
+    <div className="d-flex flex-row locationCard gap-4 m-3 mx-4">
+      <div className="savedIcon d-flex">
+        <img
+          src="/public/assets/img/bookmark.png"
+          alt=""
+          onClick={handleRemove}
+        />
+      </div>
+      <p onClick={() => selectLocation(location)}>{location}</p>
     </div>
   );
 };

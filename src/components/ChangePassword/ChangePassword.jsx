@@ -1,39 +1,33 @@
 import { NavLink } from "react-router-dom";
-import { registerService } from "../../utils/user.service";
-import "./Register.css";
-import ErrorModal from "../ErrorModal/ErrorModal.jsx";
-import SuccessModal from "../SuccessModal/SuccessModal.jsx";
+import ErrorModal from "../ErrorModal/ErrorModal";
+import SuccessModal from "../SuccessModal/SuccessModal";
+
+import "./ChangePassword.css";
 
 import { useState } from "react";
-import { passwordValidation } from "../../utils/registerValidation.service.js";
+import { changePassService } from "../../utils/user.service";
 
-const Register = () => {
+const ChangePassword = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [modal, setModal] = useState(false);
   const [errorModal, setErrorModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [newPassword, setNewPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const passVal = passwordValidation(password);
-    if (passVal) {
-      const res = await registerService({
-        username: username,
-        password: password,
-      });
-      if (res.status === 201) {
-        setModal(true);
-        setModalMessage("Successfully created account");
-      } else {
-        setErrorModal(true);
-        setModalMessage(res.response.data);
-      }
+    const res = await changePassService({
+      username: username,
+      password: password,
+      newPassword: newPassword,
+    });
+    if (res.status === 200) {
+      setModal(true);
+      setModalMessage(res.data.message);
     } else {
       setErrorModal(true);
-      setModalMessage(
-        "Password must be at least 8 characters with, a uppercase, a number and a special character"
-      );
+      setModalMessage(res.response.data.message);
     }
   };
 
@@ -43,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    <div className="register d-flex align-items-center justify-content-center flex-column flex-wrap gap-5">
+    <div className="changePass d-flex align-items-center justify-content-center flex-column flex-wrap gap-5">
       <SuccessModal
         message={modalMessage}
         show={modal}
@@ -56,7 +50,6 @@ const Register = () => {
       />
       <form
         className="d-flex flex-column align-items-center gap-5"
-        method="post"
         onSubmit={handleSubmit}
       >
         <input
@@ -81,8 +74,19 @@ const Register = () => {
             setPassword(e.target.value);
           }}
         />
+        <input
+          type="password"
+          className="form-control me-2 bg-dark text-white"
+          id="newPassword"
+          name="newPassword"
+          value={newPassword}
+          placeholder="New Password"
+          onChange={(e) => {
+            setNewPassword(e.target.value);
+          }}
+        />
         <button className="btn btn-success btn-lg" type="submit">
-          Register
+          Change Password
         </button>
       </form>
       <NavLink to="/login">
@@ -93,4 +97,4 @@ const Register = () => {
     </div>
   );
 };
-export default Register;
+export default ChangePassword;

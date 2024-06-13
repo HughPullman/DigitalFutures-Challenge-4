@@ -3,3 +3,11 @@
     height: 25px;
 }
 
+.savedIcon{
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
