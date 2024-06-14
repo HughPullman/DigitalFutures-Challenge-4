@@ -6,6 +6,7 @@ import "./ChangePassword.css";
 
 import { useState } from "react";
 import { changePassService } from "../../utils/user.service";
+import { passwordValidation } from "../../utils/registerValidation.service";
 
 const ChangePassword = () => {
   const [username, setUsername] = useState("");
@@ -17,17 +18,25 @@ const ChangePassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await changePassService({
-      username: username,
-      password: password,
-      newPassword: newPassword,
-    });
-    if (res.status === 200) {
-      setModal(true);
-      setModalMessage(res.data.message);
+    const newPassVal = passwordValidation(newPassword);
+    if (newPassVal) {
+      const res = await changePassService({
+        username: username,
+        password: password,
+        newPassword: newPassword,
+      });
+      if (res.status === 200) {
+        setModal(true);
+        setModalMessage(res.data.message);
+      } else {
+        setErrorModal(true);
+        setModalMessage(res.response.data.message);
+      }
     } else {
       setErrorModal(true);
-      setModalMessage(res.response.data.message);
+      setModalMessage(
+        "Password must be at least 8 characters with, a uppercase, a number and a special character"
+      );
     }
   };
 
@@ -48,6 +57,7 @@ const ChangePassword = () => {
         show={errorModal}
         handleClose={handleClose}
       />
+      <h2>Change Password</h2>
       <form
         className="d-flex flex-column align-items-center gap-5"
         onSubmit={handleSubmit}
@@ -85,14 +95,12 @@ const ChangePassword = () => {
             setNewPassword(e.target.value);
           }}
         />
-        <button className="btn btn-success btn-lg" type="submit">
-          Change Password
+        <button className="btn btn-success btn-lg" type="submit" role="submit">
+          Change
         </button>
       </form>
       <NavLink to="/login">
-        <button className="btn btn-success btn-lg" type="submit">
-          Back to Login
-        </button>
+        <button className="btn btn-success btn-lg">Back to Login</button>
       </NavLink>
     </div>
   );

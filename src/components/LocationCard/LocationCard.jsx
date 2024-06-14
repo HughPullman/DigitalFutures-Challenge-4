@@ -19,6 +19,7 @@ const LocationCard = ({
           src="/public/assets/img/bookmark.png"
           alt=""
           onClick={handleRemove}
+          role="remove"
         />
       </div>
       <p onClick={() => selectLocation(location)}>{location}</p>

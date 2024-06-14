@@ -8,7 +8,7 @@ const SuccessModal = ({ message, show, close }) => {
       </Modal.Header>
       <Modal.Body>{message}</Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => close()}>
+        <Button variant="secondary" onClick={() => close()} role="close">
           Close
         </Button>
       </Modal.Footer>

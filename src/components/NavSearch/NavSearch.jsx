@@ -4,7 +4,7 @@ const NavSearch = ({ handleSearch, setSearchLocation, searchLocation }) => {
   return (
     <form
       className="d-flex float-end align-items-center justify-content-end w-100"
-      role="search"
+      role="navSearch"
       onSubmit={handleSearch}
     >
       <input

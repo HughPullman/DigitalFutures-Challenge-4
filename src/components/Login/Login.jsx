@@ -77,7 +77,7 @@ const Login = ({ handleUserId }) => {
               setPassword(e.target.value);
             }}
           />
-          <button className="btn btn-success btn-lg" type="submit">
+          <button className="btn btn-success btn-lg" type="submit" role="login">
             Login
           </button>
           <NavLink to="/passChange">
