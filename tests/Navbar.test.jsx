@@ -135,12 +135,4 @@ describe("Navbar tests", () => {
 
     expect(mockSelectLocation).toHaveBeenCalledWith("TestLocation");
   });
-
-  //   it("should not show the navSearch on the home page", async () => {
-  //     renderScreen(mockUserId);
-
-  //     const navSearch = screen.queryAllByRole("navSearch");
-
-  //     expect(navSearch).toEqual([]);
-  //   });
 });

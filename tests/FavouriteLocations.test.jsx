@@ -82,29 +82,4 @@ describe("Favourite Locations page tests", () => {
       expect(locationText).toBeInTheDocument();
     });
   });
-
-  //   it("should get rid of the location when the favourite button is clicked", async () => {
-  //     getLocations.mockReturnValue({
-  //       status: 200,
-  //       data: {
-  //         userLocations: ["TestLocation"],
-  //       },
-  //     });
-  //     deleteLocations.mockReturnValue({
-  //       status: 200,
-  //     });
-  //     renderScreen(mockUserId);
-
-  //     await waitFor(() => {
-  //       const favBtn = screen.getByRole("remove");
-  //       expect(favBtn).toBeInTheDocument();
-  //     });
-
-  //     const favBtn = screen.getByRole("remove");
-  //     await userEvent.click(favBtn);
-
-  //     const locationText = screen.queryAllByText("TestLocation");
-
-  //     expect(locationText).toEqual([]);
-  //   });
 });

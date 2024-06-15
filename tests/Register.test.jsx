@@ -52,4 +52,77 @@ describe("Register screen tests", () => {
       password: "TestPassword1!",
     });
   });
+
+  it("should display success modal with correct message when status 201", async () => {
+    registerService.mockReturnValue({
+      status: 201,
+    });
+
+    fillForm();
+
+    const submitBtn = screen.getByText(/Register/i);
+    await userEvent.click(submitBtn);
+
+    const successTitle = screen.getByText("Success");
+    const successText = screen.getByText("Successfully created account");
+
+    expect(successText).toBeInTheDocument();
+    expect(successTitle).toBeInTheDocument();
+  });
+
+  it("should display error modal with correct message when status 400", async () => {
+    registerService.mockReturnValue({
+      status: 400,
+      response: {
+        data: "Test Error Message",
+      },
+    });
+
+    fillForm();
+
+    const submitBtn = screen.getByText(/Register/i);
+    await userEvent.click(submitBtn);
+
+    const errorTitle = screen.getByText("Error");
+    const errorText = screen.getByText("Test Error Message");
+
+    expect(errorText).toBeInTheDocument();
+    expect(errorTitle).toBeInTheDocument();
+  });
+
+  it("should close the successModal when calling handleClose", async () => {
+    registerService.mockReturnValue({
+      status: 201,
+    });
+
+    fillForm();
+
+    const submitBtn = screen.getByText(/Register/i);
+    await userEvent.click(submitBtn);
+
+    const closeBtn = screen.getByRole("close");
+    await userEvent.click(closeBtn);
+
+    const modalText = screen.queryAllByText("Successfully created account");
+
+    expect(modalText).toEqual([]);
+  });
+
+  it("should load the error modal with the correct message with an invalid password", async () => {
+    const password = screen.getByPlaceholderText("Password");
+    const username = screen.getByPlaceholderText("Username");
+    fireEvent.input(username, { target: { value: "TestUsername" } });
+    fireEvent.input(password, { target: { value: "TestBadPass" } });
+
+    const submitBtn = screen.getByText(/Register/i);
+    await userEvent.click(submitBtn);
+
+    const errorTitle = screen.getByText("Error");
+    const errorText = screen.getByText(
+      "Password must be at least 8 characters with, a uppercase, a number and a special character"
+    );
+
+    expect(errorText).toBeInTheDocument();
+    expect(errorTitle).toBeInTheDocument();
+  });
 });

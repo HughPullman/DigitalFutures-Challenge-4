@@ -34,13 +34,4 @@ describe("Home page tests", () => {
     const homeHead = screen.getByText(/Tell me about.../i);
     expect(homeHead).toBeInTheDocument();
   });
-
-  //   it("should call the handleSearch with location when the form is submitted", async () => {
-  //     const searchBtn = screen.getByText(/Search/i);
-  //     await userEvent.click(searchBtn);
-
-  //     expect(mockSetSearchLocation).toHaveBeenCalledWith({
-  //       location: "MockLocation",
-  //     });
-  //   });
 });

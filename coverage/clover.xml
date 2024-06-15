@@ -1,95 +1,383 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1718381458173" clover="3.2.0">
-  <project timestamp="1718381458173" name="All files">
-    <metrics statements="63" coveredstatements="20" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="3" elements="83" coveredelements="23" complexity="0" loc="63" ncloc="63" packages="4" files="5" classes="5"/>
-    <package name="components.ErrorModal">
+<coverage generated="1718469581199" clover="3.2.0">
+  <project timestamp="1718469581199" name="All files">
+    <metrics statements="255" coveredstatements="245" conditionals="51" coveredconditionals="48" methods="66" coveredmethods="65" elements="372" coveredelements="358" complexity="0" loc="255" ncloc="255" packages="19" files="22" classes="22"/>
+    <package name="src">
+      <metrics statements="32" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+      <file name="App.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/App.jsx">
+        <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="27" type="stmt"/>
+        <line num="20" count="27" type="stmt"/>
+        <line num="21" count="27" type="stmt"/>
+        <line num="22" count="27" type="stmt"/>
+        <line num="23" count="27" type="stmt"/>
+        <line num="25" count="27" type="stmt"/>
+        <line num="27" count="27" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="27" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="27" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="48" count="27" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="60" count="27" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="64" count="27" type="stmt"/>
+      </file>
+      <file name="main.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/main.jsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ChangePassword">
+      <metrics statements="26" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+      <file name="ChangePassword.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/ChangePassword/ChangePassword.jsx">
+        <metrics statements="26" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="27" type="stmt"/>
+        <line num="13" count="27" type="stmt"/>
+        <line num="14" count="27" type="stmt"/>
+        <line num="15" count="27" type="stmt"/>
+        <line num="16" count="27" type="stmt"/>
+        <line num="17" count="27" type="stmt"/>
+        <line num="19" count="27" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="28" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="27" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="27" type="stmt"/>
+        <line num="73" count="5" type="stmt"/>
+        <line num="84" count="5" type="stmt"/>
+        <line num="95" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ErrorModal">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="ErrorModal.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/ErrorModal/ErrorModal.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="115" type="stmt"/>
       </file>
     </package>
-    <package name="components.Register">
-      <metrics statements="24" coveredstatements="9" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="1"/>
-      <file name="Register.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/Register/Register.jsx">
-        <metrics statements="24" coveredstatements="9" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="1"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+    <package name="src.components.FavouriteLocations">
+      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="FavouriteLocations.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/FavouriteLocations/FavouriteLocations.jsx">
+        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Footer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Footer.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/Footer/Footer.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="28" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Home">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Home.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/Home/Home.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.HomeSearch">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="HomeSearch.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/HomeSearch/HomeSearch.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="components.SuccessModal">
-      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="SuccessModal.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/SuccessModal/SuccessModal.jsx">
-        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
+    <package name="src.components.LocationCard">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="LocationCard.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/LocationCard/LocationCard.jsx">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Login">
+      <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+      <file name="Login.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/Login/Login.jsx">
+        <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="39" type="stmt"/>
+        <line num="12" count="39" type="stmt"/>
+        <line num="13" count="39" type="stmt"/>
+        <line num="14" count="39" type="stmt"/>
+        <line num="15" count="39" type="stmt"/>
+        <line num="17" count="39" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="23" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="39" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="39" type="stmt"/>
+        <line num="66" count="7" type="stmt"/>
+        <line num="77" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.LoginButton">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="LoginButton.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/LoginButton/LoginButton.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="27" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.LogoutButton">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="LogoutButton.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/LogoutButton/LogoutButton.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="31" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="utils">
-      <metrics statements="33" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+    <package name="src.components.NavSearch">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="NavSearch.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/NavSearch/NavSearch.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="44" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Navbar">
+      <metrics statements="20" coveredstatements="19" conditionals="10" coveredconditionals="7" methods="6" coveredmethods="6"/>
+      <file name="Navbar.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/Navbar/Navbar.jsx">
+        <metrics statements="20" coveredstatements="19" conditionals="10" coveredconditionals="7" methods="6" coveredmethods="6"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="18" count="57" type="stmt"/>
+        <line num="19" count="57" type="stmt"/>
+        <line num="21" count="57" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="57" type="stmt"/>
+        <line num="26" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="33" count="57" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="39" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="55" count="57" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Register">
+      <metrics statements="24" coveredstatements="24" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+      <file name="Register.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/Register/Register.jsx">
+        <metrics statements="24" coveredstatements="24" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="12" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+        <line num="14" count="22" type="stmt"/>
+        <line num="15" count="22" type="stmt"/>
+        <line num="17" count="22" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="22" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="45" count="22" type="stmt"/>
+        <line num="70" count="5" type="stmt"/>
+        <line num="81" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SavedLocations">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="SavedLocations.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/SavedLocations/SavedLocations.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="30" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SuccessModal">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="SuccessModal.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/SuccessModal/SuccessModal.jsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="88" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.WeatherCard">
+      <metrics statements="12" coveredstatements="12" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
+      <file name="WeatherCard.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/WeatherCard/WeatherCard.jsx">
+        <metrics statements="12" coveredstatements="12" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="33" type="stmt"/>
+        <line num="5" count="33" type="stmt"/>
+        <line num="6" count="33" type="cond" truecount="7" falsecount="0"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="33" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.WeatherOnly">
+      <metrics statements="38" coveredstatements="38" conditionals="14" coveredconditionals="14" methods="6" coveredmethods="6"/>
+      <file name="WeatherOnly.jsx" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/components/WeatherOnly/WeatherOnly.jsx">
+        <metrics statements="38" coveredstatements="38" conditionals="14" coveredconditionals="14" methods="6" coveredmethods="6"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="280" type="stmt"/>
+        <line num="22" count="280" type="stmt"/>
+        <line num="24" count="280" type="cond" truecount="4" falsecount="0"/>
+        <line num="25" count="32" type="stmt"/>
+        <line num="26" count="32" type="stmt"/>
+        <line num="29" count="32" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="8" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="41" count="8" type="stmt"/>
+        <line num="42" count="40" type="stmt"/>
+        <line num="43" count="40" type="stmt"/>
+        <line num="50" count="8" type="stmt"/>
+        <line num="53" count="8" type="stmt"/>
+        <line num="54" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="69" count="8" type="stmt"/>
+        <line num="70" count="8" type="stmt"/>
+        <line num="73" count="8" type="stmt"/>
+        <line num="74" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="77" count="6" type="stmt"/>
+        <line num="81" count="8" type="stmt"/>
+        <line num="82" count="6" type="stmt"/>
+        <line num="85" count="8" type="stmt"/>
+        <line num="87" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="38" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <file name="registerValidation.service.js" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/utils/registerValidation.service.js">
-        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
       </file>
       <file name="user.service.js" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/utils/user.service.js">
-        <metrics statements="30" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <metrics statements="30" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
+        <line num="53" count="9" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
+        <line num="65" count="9" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
+      </file>
+      <file name="weather.service.js" path="C:/Users/Hugh/Documents/Digital Futures Course/challenge-4-travel-info-front-end-HughPullman/src/utils/weather.service.js">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
     </package>
   </project>

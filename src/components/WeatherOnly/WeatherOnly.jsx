@@ -94,6 +94,7 @@ const WeatherOnly = ({ weatherData, userId }) => {
         <div
           className="addFavourites bg-black bg-gradient p-3 d-flex flex-row"
           onClick={handleFavourite}
+          role="handleFav"
         >
           {isFav ? (
             <>
