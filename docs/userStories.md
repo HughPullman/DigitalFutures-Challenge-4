@@ -17,3 +17,8 @@
 ![alt text](ComponentH2.png "ComponentH2")
 ![alt text](ComponentH3.png "ComponentH3")
 ![alt text](ComponentH4.png "ComponentH4")
+
+## Testing Login details
+
+Username: Test
+Password : Password1!
